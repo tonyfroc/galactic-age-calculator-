@@ -18,5 +18,10 @@ export default class Earthling {
   }
   mercuryAge() {
     this.mercuryAge = Math.floor(this.earthAge / .24);
-  }
+    if (this.mercuryAge > this.lifeExpectancy) {
+      this.mercuryLifeExpectancy = `You have exceeded your Earth life expectancy by ${this.mercuryAge - this.lifeExpectancy} years`;
+    } else {
+      this.mercuryLifeExpectancy = `You have about 0 years left on Mercury!`;
+    }
+}
 }
