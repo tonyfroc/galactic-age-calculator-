@@ -1,5 +1,6 @@
 export default class Earthling {
-  constructor(earthAge, yearsLeft) {
-
+  constructor(earthAge, lifeExp) {
+    this.earthAge = earthAge;
+    this.lifeExp = lifeExp; 
   }
 }
