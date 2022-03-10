@@ -17,6 +17,21 @@ describe ('Earthling', () => {
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(83)
   });
+  test('Should return the correct life expectancy for a Black earthling', () => {
+    const earthling = new Earthling(29, 'Black');
+    earthling.lifeExp();
+    expect(earthling.lifeExpectancy).toEqual(73)
+  });
+  test('Should return the correct life expectancy for a Black earthling', () => {
+    const earthling = new Earthling(29, 'Latino');
+    earthling.lifeExp();
+    expect(earthling.lifeExpectancy).toEqual(80)
+  });
+  test('Should return the correct life expectancy for a Black earthling', () => {
+    const earthling = new Earthling(29, 'Native American');
+    earthling.lifeExp();
+    expect(earthling.lifeExpectancy).toEqual(75)
+  });
   test('Should return the correct age for an Earthling in Mercury years', () => {
     const earthling = new Earthling(29, 'White');
     earthling.mercuryAge();

@@ -7,13 +7,13 @@ export default class Earthling {
     if (this.ethnicity === 'White') {
       this.lifeExpectancy = 78;
     } else if (this.ethnicity === 'Black') {
-      this.lifeExpectancy = 0;
+      this.lifeExpectancy = 73;
     } else if (this.ethnicity === 'Asian') {
       this.lifeExpectancy = 83;
     } else if (this.ethnicity === 'Latino') {
-      this.lifeExpectancy = 0;
+      this.lifeExpectancy = 80;
     } else if (this.ethnicity === 'Native American') {
-      this.lifeExpectancy = 0;
+      this.lifeExpectancy = 75;
     }
   }
   mercuryAge() {
