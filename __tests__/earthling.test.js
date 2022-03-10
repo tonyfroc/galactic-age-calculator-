@@ -37,4 +37,10 @@ describe ('Earthling', () => {
     earthling.mercuryAge();
     expect(earthling.mercuryAge).toEqual(120)
   });
+  test('Should determine how many years an Earthling has exceeded their Earth life expectancy in Mercury years', () => {
+    const earthling = new Earthling(29, 'White');
+    earthling.lifeExp();
+    earthling.mercuryAge();
+    expect(earthling.mercuryLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 42 years`)
+  });
 });
