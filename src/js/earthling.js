@@ -3,8 +3,7 @@ export default class Earthling {
     this.earthAge = earthAge;
     this.ethnicity = ethnicity; 
   }
-
   mercuryAge() {
-    this.mercuryAge = 0; 
+    this.mercuryAge = Math.floor(this.earthAge / .24);
   }
 }
