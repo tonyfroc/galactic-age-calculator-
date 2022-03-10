@@ -7,10 +7,15 @@ describe ('Earthling', () => {
     expect(earthling.earthAge).toEqual(29);
     expect(earthling.ethnicity).toEqual('White');
   });
-  test('Should return the correct life expectancy for a white person', () => {
+  test('Should return the correct life expectancy for a White Earthling', () => {
     const earthling = new Earthling(29, 'White');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(78)
+  });
+  test('Should return the correct life expectancy for an Asian earthling', () => {
+    const earthling = new Earthling(29, 'Asian');
+    earthling.lifeExp();
+    expect(earthling.lifeExpectancy).toEqual(83)
   });
   test('Should return the correct age for an Earthling in Mercury years', () => {
     const earthling = new Earthling(29, 'White');
