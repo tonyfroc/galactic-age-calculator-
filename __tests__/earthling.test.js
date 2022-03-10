@@ -7,6 +7,11 @@ describe ('Earthling', () => {
     expect(earthling.earthAge).toEqual(29);
     expect(earthling.ethnicity).toEqual('White');
   });
+  test('2. Should return the correct age for an Earthling in Mercury years', () => {
+    const earthling = new Earthling(29, 'White');
+    earthling.mercuryAge();
+    expect(earthling.mercuryAge).toEqual(120)
+  });
   test('3. Should return the correct life expectancy for a White Earthling', () => {
     const earthling = new Earthling(29, 'White');
     earthling.lifeExp();
@@ -22,25 +27,26 @@ describe ('Earthling', () => {
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(73)
   });
-  test('4b. Should return the correct life expectancy for a Black earthling', () => {
+  test('4b. Should return the correct life expectancy for a Latino earthling', () => {
     const earthling = new Earthling(29, 'Latino');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(80)
   });
-  test('4c. Should return the correct life expectancy for a Black earthling', () => {
+  test('4c. Should return the correct life expectancy for a Native American earthling', () => {
     const earthling = new Earthling(29, 'Native American');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(75)
-  });
-  test('2. Should return the correct age for an Earthling in Mercury years', () => {
-    const earthling = new Earthling(29, 'White');
-    earthling.mercuryAge();
-    expect(earthling.mercuryAge).toEqual(120)
   });
   test('5. Should determine how many years an Earthling has exceeded their Earth life expectancy in Mercury years', () => {
     const earthling = new Earthling(29, 'White');
     earthling.lifeExp();
     earthling.mercuryAge();
     expect(earthling.mercuryLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 42 years`)
+  });
+  test('6. Should determine how many years an Earthling has left on Mercury if they are younger in Mercury years than their life expectancy', () => {
+    const earthling = new Earthling(10, 'White');
+    earthling.lifeExp();
+    earthling.mercuryAge();
+    expect(earthling.mercuryLifeExpectancy).toEqual(`You have about 37 years left on Mercury!`)
   });
 });
