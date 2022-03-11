@@ -87,4 +87,12 @@ describe ('Earthling', () => {
     expect(earthling.lifeExpectancy).toEqual(73)
     expect(earthling.marsLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 3 years`)
   });
+  test('12. If lifeExpectancy > marsAge, should correctly return lifeExpectancy (Earth) minus marsAge', () => {
+    const earthling = new Earthling(30, 'Black');
+    earthling.lifeExp();
+    earthling.marsAge();
+    expect(earthling.lifeExpectancy).toEqual(73)
+    expect(earthling.marsAge).toEqual(15)
+    expect(earthling.marsLifeExpectancy).toEqual(`You have about 58 years left on Mars!`)
+  });
 });
