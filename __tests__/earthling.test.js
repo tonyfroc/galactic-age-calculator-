@@ -49,4 +49,9 @@ describe ('Earthling', () => {
     earthling.mercuryAge();
     expect(earthling.mercuryLifeExpectancy).toEqual(`You have about 37 years left on Mercury!`)
   });
+  test('7. Should return the correct age for an Earthling in Venus years', () => {
+    const earthling = new Earthling(29, 'White');
+    earthling.venusAge();
+    expect(earthling.venusAge).toEqual(47)
+  });
 });
