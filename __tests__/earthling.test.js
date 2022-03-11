@@ -53,12 +53,12 @@ describe ('Earthling', () => {
     expect(earthling.mercuryAge).toEqual(41)
     expect(earthling.mercuryLifeExpectancy).toEqual(`You have about 37 years left on Mercury!`)
   });
-  test('7. Should correctly returnt the age of an Earthling in Venus years', () => {
+  test('7. Should correctly return the age of an Earthling in Venus years', () => {
     const earthling = new Earthling(60, 'White');
     earthling.venusAge();
     expect(earthling.venusAge).toEqual(96)
   });
-  test('8. If venusAge > lifeExpectancy (Earth), should correctly return venusAge minus lifeExpectancy ', () => {
+  test('8. If venusAge > lifeExpectancy (Earth), should correctly return venusAge minus lifeExpectancy', () => {
     const earthling = new Earthling(60, 'White');
     earthling.lifeExp();
     earthling.venusAge();
@@ -78,5 +78,13 @@ describe ('Earthling', () => {
     const earthling = new Earthling(29, 'White');
     earthling.marsAge();
     expect(earthling.marsAge).toEqual(15)
+  });
+  test('11. If marsAge > lifeExpectancy (Earth), should correctly return marsAge minus lifeExpectancy', () => {
+    const earthling = new Earthling(144, 'Black');
+    earthling.lifeExp();
+    earthling.marsAge();
+    expect(earthling.marsAge).toEqual(76)
+    expect(earthling.lifeExpectancy).toEqual(73)
+    expect(earthling.marsLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 3 years`)
   });
 });
