@@ -74,4 +74,9 @@ describe ('Earthling', () => {
     expect(earthling.venusAge).toEqual(16)
     expect(earthling.venusLifeExpectancy).toEqual(`You have about 62 years left on Venus!`)
   });
+  test('10. Should return the correct age for an Earthling in Mars years', () => {
+    const earthling = new Earthling(29, 'White');
+    earthling.marsAge();
+    expect(earthling.marsAge).toEqual(15)
+  });
 });
