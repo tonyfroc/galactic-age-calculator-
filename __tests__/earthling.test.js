@@ -121,4 +121,14 @@ describe("Earthling", () => {
       `You have exceeded your Earth life expectancy by 11 years`
     );
   });
+  test("15. If lifeExpectancy (Earth) > jupiterAge, should correctly return lifeExpectancy - jupiterAge", () => {
+    const earthling = new Earthling(21, "Black");
+    earthling.lifeExp();
+    earthling.jupiterAge();
+    expect(earthling.jupiterAge).toEqual(1);
+    expect(earthling.lifeExpectancy).toEqual(73);
+    expect(earthling.jupiterLifeExpectancy).toEqual(
+      `You have about 58 years left on Jupiter!`
+    );
+  });
 });
