@@ -37,7 +37,7 @@ describe ('Earthling', () => {
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(75)
   });
-  test('5. Should determine how many years an Earthling has exceeded their Earth life expectancy in Mercury years', () => {
+  test('5. If mercuryAge > lifeExpectancy (Earth), should correctly return mercuryAge - lifeExpectancy', () => {
     const earthling = new Earthling(29, 'White');
     earthling.lifeExp();
     earthling.mercuryAge();
@@ -45,7 +45,7 @@ describe ('Earthling', () => {
     expect(earthling.lifeExpectancy).toEqual(78)
     expect(earthling.mercuryLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 42 years`)
   });
-  test('6. Should determine how many years an Earthling has left on Mercury if they are younger in Mercury years than their life expectancy on Earth', () => {
+  test('6. If lifeExpectancy > mercuryAge, should correctly return lifeExpectancy (Earth) - Mercury Age', () => {
     const earthling = new Earthling(10, 'White');
     earthling.lifeExp();
     earthling.mercuryAge();
@@ -58,12 +58,20 @@ describe ('Earthling', () => {
     earthling.venusAge();
     expect(earthling.venusAge).toEqual(96)
   });
-  test('8. Should determine how many years an Earthling has exceeded their Earth life expectancy in Venus years', () => {
+  test('8. If venusAge > lifeExpectancy (Earth), should correctly return venusAge minus lifeExpectancy ', () => {
     const earthling = new Earthling(60, 'White');
     earthling.lifeExp();
     earthling.venusAge();
     expect(earthling.venusAge).toEqual(96)
     expect(earthling.lifeExpectancy).toEqual(78)
     expect(earthling.venusLifeExpectancy).toEqual(`You have exceeded your Earth life expectancy by 18 years`)
+  });
+  test('8. If lifeExpectancy > venusAge, should correctly return lifeExpectancy (Earth) minus venusAge', () => {
+    const earthling = new Earthling(10, 'White');
+    earthling.lifeExp();
+    earthling.venusAge();
+    expect(earthling.lifeExpectancy).toEqual(78)
+    expect(earthling.venusAge).toEqual(16)
+    expect(earthling.venusLifeExpectancy).toEqual(`You have about 10 years left on Venus!`)
   });
 });
