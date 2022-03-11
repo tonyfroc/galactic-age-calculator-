@@ -52,4 +52,7 @@ export default class Earthling {
       } years left on Mars!`;
     }
   }
+  jupiterAge() {
+    this.jupiterAge = Math.floor(this.earthAge / 11.86);
+  }
 }

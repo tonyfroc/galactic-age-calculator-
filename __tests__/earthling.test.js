@@ -107,7 +107,7 @@ describe("Earthling", () => {
     );
   });
   test("13. Should correctly return the age of an Earthling in Jupiter years", () => {
-    const earthling = new Earthling(30, "Asian");
+    const earthling = new Earthling(21, "Asian");
     earthling.jupiterAge();
     expect(earthling.jupiterAge).toEqual(1);
   });
