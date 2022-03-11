@@ -17,22 +17,22 @@ describe ('Earthling', () => {
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(78)
   });
-  test('4. Should return the correct life expectancy for an Asian earthling', () => {
+  test('4. Should return the correct life expectancy for an Asian Earthling', () => {
     const earthling = new Earthling(29, 'Asian');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(83)
   });
-  test('4a. Should return the correct life expectancy for a Black earthling', () => {
+  test('4a. Should return the correct life expectancy for a Black Earthling', () => {
     const earthling = new Earthling(29, 'Black');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(73)
   });
-  test('4b. Should return the correct life expectancy for a Latino earthling', () => {
+  test('4b. Should return the correct life expectancy for a Latino Earthling', () => {
     const earthling = new Earthling(29, 'Latino');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(80)
   });
-  test('4c. Should return the correct life expectancy for a Native American earthling', () => {
+  test('4c. Should return the correct life expectancy for a Native American Earthling', () => {
     const earthling = new Earthling(29, 'Native American');
     earthling.lifeExp();
     expect(earthling.lifeExpectancy).toEqual(75)
@@ -53,7 +53,7 @@ describe ('Earthling', () => {
     expect(earthling.mercuryAge).toEqual(41)
     expect(earthling.mercuryLifeExpectancy).toEqual(`You have about 37 years left on Mercury!`)
   });
-  test('7. Should return the correct age for an Earthling in Venus years', () => {
+  test('7. Should correctly returnt the age of an Earthling in Venus years', () => {
     const earthling = new Earthling(60, 'White');
     earthling.venusAge();
     expect(earthling.venusAge).toEqual(96)
@@ -74,7 +74,7 @@ describe ('Earthling', () => {
     expect(earthling.venusAge).toEqual(16)
     expect(earthling.venusLifeExpectancy).toEqual(`You have about 62 years left on Venus!`)
   });
-  test('10. Should return the correct age for an Earthling in Mars years', () => {
+  test('10. Should correctly return the age of an Earthling in Mars years', () => {
     const earthling = new Earthling(29, 'White');
     earthling.marsAge();
     expect(earthling.marsAge).toEqual(15)

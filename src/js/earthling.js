@@ -40,4 +40,7 @@ export default class Earthling {
       } years left on Venus!`;
     }
   }
+  marsAge() {
+    this.marsAge = Math.floor(this.earthAge / 1.88);
+  }
 }
