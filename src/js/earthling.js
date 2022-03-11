@@ -54,5 +54,14 @@ export default class Earthling {
   }
   jupiterAge() {
     this.jupiterAge = Math.floor(this.earthAge / 11.86);
+    if (this.jupiterAge > this.lifeExpectancy) {
+      this.jupiterLifeExpectancy = `You have exceeded your Earth life expectancy by ${
+        this.jupiterAge - this.lifeExpectancy
+      } years`;
+    } else {
+      this.jupiterLifeExpectancy = `You have about ${
+        this.lifeExpectancy - this.jupiterAge
+      } years left on Jupiter!`;
+    }
   }
 }
