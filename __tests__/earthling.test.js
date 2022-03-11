@@ -128,7 +128,7 @@ describe("Earthling", () => {
     expect(earthling.jupiterAge).toEqual(1);
     expect(earthling.lifeExpectancy).toEqual(73);
     expect(earthling.jupiterLifeExpectancy).toEqual(
-      `You have about 58 years left on Jupiter!`
+      `You have about 72 years left on Jupiter!`
     );
   });
 });
