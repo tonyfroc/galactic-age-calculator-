@@ -35,7 +35,9 @@ export default class Earthling {
         this.venusAge - this.lifeExpectancy
       } years`;
     } else {
-      this.venusLifeExpectancy = `You have about 10 years left on Venus!`;
+      this.venusLifeExpectancy = `You have about ${
+        this.lifeExpectancy - this.venusAge
+      } years left on Venus!`;
     }
   }
 }
