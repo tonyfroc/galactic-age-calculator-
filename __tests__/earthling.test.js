@@ -52,6 +52,6 @@ describe ('Earthling', () => {
   test('7. Should return the correct age for an Earthling in Venus years', () => {
     const earthling = new Earthling(29, 'White');
     earthling.venusAge();
-    expect(earthling.venusAge).toEqual(47)
+    expect(earthling.venusAge).toEqual(46)
   });
 });

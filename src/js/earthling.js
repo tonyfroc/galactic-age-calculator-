@@ -24,4 +24,7 @@ export default class Earthling {
       this.mercuryLifeExpectancy = `You have about ${this.lifeExpectancy - this.mercuryAge} years left on Mercury!`;
     }
 }
+  venusAge() {
+    this.venusAge = Math.floor(this.earthAge / .62); 
+  }
 }
