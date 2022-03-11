@@ -42,5 +42,14 @@ export default class Earthling {
   }
   marsAge() {
     this.marsAge = Math.floor(this.earthAge / 1.88);
+    if (this.marsAge > this.lifeExpectancy) {
+      this.marsLifeExpectancy = `You have exceeded your Earth life expectancy by ${
+        this.marsAge - this.lifeExpectancy
+      } years`;
+    } else {
+      this.marsLifeExpectancy = `You have about ${
+        this.lifeExpectancy - this.marsAge
+      } years left on Mars!`;
+    }
   }
 }
