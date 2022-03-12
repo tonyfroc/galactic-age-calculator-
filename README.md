@@ -15,7 +15,7 @@ The Super Galactic Age Calculator takes a user's age and ethnicity as inputs. De
 
 ## Tests
 
-See tests folder. 
+See `earthling.test.js` in `__tests__`.
 
 ## Setup/Installation Requirements
 
