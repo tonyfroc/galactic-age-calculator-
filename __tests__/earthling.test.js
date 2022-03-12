@@ -46,7 +46,7 @@ describe("Earthling", () => {
       `You have exceeded your Earth life expectancy by 42 years`
     );
   });
-  test("6. If lifeExpectancy > mercuryAge, should correctly return lifeExpectancy (Earth) - Mercury Age", () => {
+  test("6. If lifeExpectancy (Earth) > mercuryAge, should correctly return lifeExpectancy - Mercury Age", () => {
     const earthling = new Earthling(10, "White");
     earthling.lifeExp();
     earthling.mercuryAge();
@@ -71,7 +71,7 @@ describe("Earthling", () => {
       `You have exceeded your Earth life expectancy by 18 years`
     );
   });
-  test("9. If lifeExpectancy > venusAge, should correctly return lifeExpectancy (Earth) minus venusAge", () => {
+  test("9. If lifeExpectancy (Earth) > venusAge, should correctly return lifeExpectancy (Earth) minus venusAge", () => {
     const earthling = new Earthling(10, "White");
     earthling.lifeExp();
     earthling.venusAge();
@@ -96,7 +96,7 @@ describe("Earthling", () => {
       `You have exceeded your Earth life expectancy by 3 years`
     );
   });
-  test("12. If lifeExpectancy > marsAge, should correctly return lifeExpectancy (Earth) minus marsAge", () => {
+  test("12. If lifeExpectancy (Earth) > marsAge, should correctly return lifeExpectancy minus marsAge", () => {
     const earthling = new Earthling(30, "Black");
     earthling.lifeExp();
     earthling.marsAge();

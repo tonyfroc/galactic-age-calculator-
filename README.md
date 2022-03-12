@@ -30,8 +30,8 @@ See tests folder.
 - `git init`
 - `git clone `https://github.com/tonyfroc/tf-galactic-age-calculator.git`
 - `npm install` to install dependencies
-- `npm run build` to run installed apps. 
-- `npm run start` to open testing environment. 
+- `npm run build` to run installed dependencies. 
+- `jest` in terminal test the JavaScript logic. 
 
 ## Known Bugs
 
